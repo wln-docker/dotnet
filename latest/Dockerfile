@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:1.0.0-core
+FROM microsoft/dotnet:latest
 MAINTAINER WlniaoStudio <ideploy@wlniao.com>
 ENV WLN_STARTUP_ROOT /wln
 ENV WLN_LISTEN_PORT 5000
