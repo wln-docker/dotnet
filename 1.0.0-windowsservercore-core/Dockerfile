@@ -8,4 +8,3 @@ WORKDIR /wln
 ENTRYPOINT ["dotnet", "run"]
 ONBUILD COPY . /wln
 ONBUILD WORKDIR /wln
-ONBUILD RUN dotnet restore
