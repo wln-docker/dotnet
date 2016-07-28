@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:nanoserver
+FROM microsoft/dotnet:1.0.0-nanoserver-core
 MAINTAINER WlniaoStudio <ideploy@wlniao.com>
 
 # Install .NET Core
