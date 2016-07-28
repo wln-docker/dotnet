@@ -17,19 +17,7 @@ RUN apt-get install -y apt-transport-https libicu52 liblldb-3.6 liblttng-ust0 li
     && echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list \
     && apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893 \
     && apt-get update
-#RUN apt-get install -y dotnet-dev-1.0.0-preview2-003121
-
-RUN curl -o /tmp/host.deb -sSL https://dotnetcli.blob.core.windows.net/dotnet/beta/Installers/Latest/dotnet-host-ubuntu-x64.latest.deb \
-	&& dpkg -i /tmp/host.deb \
-	&& rm /tmp/*.deb
-
-RUN curl -o /tmp/sharedframework.deb -sSL https://dotnetcli.blob.core.windows.net/dotnet/beta/Installers/Latest/dotnet-sharedframework-ubuntu-x64.latest.deb \
-	&& dpkg -i /tmp/sharedframework.deb \
-	&& rm /tmp/*.deb
-
-RUN curl -o /tmp/sdk.deb -sSL https://dotnetcli.blob.core.windows.net/dotnet/beta/Installers/Latest/dotnet-sdk-ubuntu-x64.latest.deb \
-	&& dpkg -i /tmp/sdk.deb \
-	&& rm /tmp/*.deb
+RUN apt-get install -y dotnet-dev-1.0.0-preview2-003121
 	
 WORKDIR /wln
 ENTRYPOINT ["dotnet", "run"]
