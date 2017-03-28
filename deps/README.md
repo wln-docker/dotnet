@@ -1,5 +1,4 @@
-﻿#wlniao/dotnet:deps-1.0
-
+﻿#wlniao/dotnet:deps
 ### Intro
 ```
 dotnet环境的基础镜像（1.0版本）
@@ -7,5 +6,5 @@ dotnet环境的基础镜像（1.0版本）
 
 ### Use
 ```
-FROM wlniao/dotnet:deps-1.0
+FROM wlniao/dotnet:deps
 ```

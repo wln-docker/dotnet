@@ -1,4 +1,4 @@
-FROM wlniao:deps-1.0
+FROM wlniao/dotnet:deps
 MAINTAINER WlniaoStudio <wlniao@qq.com>
 
 RUN apt-get install -y git vim

@@ -1,4 +1,4 @@
-FROM wlniao:deps-1.0
+FROM wlniao/dotnet:deps
 MAINTAINER WlniaoStudio <wlniao@qq.com>
 
 RUN curl -SL https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/1.0.4/dotnet-debian-x64.1.0.4.tar.gz --output dotnet.tar.gz \
