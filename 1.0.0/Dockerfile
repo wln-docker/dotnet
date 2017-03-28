@@ -1,10 +1,11 @@
-FROM microsoft/dotnet:latest
-MAINTAINER WlniaoStudio <ideploy@wlniao.com>
-ENV WLN_STARTUP_ROOT /wln
-ENV WLN_LISTEN_PORT 5000
-EXPOSE 5000
-WORKDIR /wln
-ENTRYPOINT ["dotnet", "run"]
+FROM wlniao:deps-1.0
+MAINTAINER WlniaoStudio <wlniao@qq.com>
+
+RUN curl -SL https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/1.0.0/dotnet-debian-x64.1.0.0.tar.gz --output dotnet.tar.gz \
+    && mkdir -p /usr/share/dotnet \
+    && tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
+    && rm dotnet.tar.gz \
+    && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+
 ONBUILD COPY . /wln
 ONBUILD WORKDIR /wln
-ONBUILD RUN dotnet restore
