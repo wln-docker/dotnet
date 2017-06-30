@@ -17,5 +17,4 @@ RUN apt-get update && apt-get install -y ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 	
 ONBUILD EXPOSE 5000
-ONBUILD ENV WLN_STARTUP_ROOT /wln
 ONBUILD WORKDIR /wln
