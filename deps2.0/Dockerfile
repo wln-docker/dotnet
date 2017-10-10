@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER WlniaoStudio <wlniao@qq.com>
 
 RUN apt-get update && apt-get install -y ca-certificates \
