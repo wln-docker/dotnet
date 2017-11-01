@@ -1,7 +1,7 @@
 FROM wlniao/dotnet:deps
 MAINTAINER WlniaoStudio <wlniao@qq.com>
 
-RUN curl -SL https://dotnetcli.blob.core.windows.net/dotnet/release/1.1.0/Binaries/1.1.2/dotnet-debian-x64.1.1.2.tar.gz --output dotnet.tar.gz \
+RUN curl -SL https://dotnetcli.blob.core.windows.net/dotnet/release/1.1.0/Binaries/1.1.4/dotnet-debian-x64.1.1.4.tar.gz --output dotnet.tar.gz \
     && mkdir -p /usr/share/dotnet \
     && tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
     && rm dotnet.tar.gz \
