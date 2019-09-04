@@ -17,3 +17,5 @@
 * QQ: 774115540
 * Web: http://www.wlniao.com
 * Email: wlniao@qq.com
+
+## 最新版本：2.2.0
