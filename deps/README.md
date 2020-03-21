@@ -1,7 +1,7 @@
-﻿#wlniao/dotnet:deps
+﻿# wlniao/dotnet:deps
 ### Intro
 ```
-dotnet环境的基础镜像（1.0版本）
+dotnet环境的基础镜像
 ```
 
 ### Use

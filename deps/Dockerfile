@@ -1,19 +1,12 @@
-FROM debian:jessie
-MAINTAINER WlniaoStudio <wlniao@qq.com>
+FROM alpine:3.10
+LABEL Maintainer="Wlniao <wlniao@qq.com>" \
+      Description="Dotnet container based on Alpine Linux."
 
-RUN apt-get update && apt-get install -y ca-certificates \
-	libc6 \
-	libcurl3 \
-	libgcc1 \
-	libgssapi-krb5-2 \
-	libicu52 \
-	liblttng-ust0 \
-	libssl1.0.0 \
-	libstdc++6 \
-	libunwind8 \
-	libuuid1 \
-	zlib1g \
+RUN apk --no-cache add ca-certificates \
+	libgdiplus \
+	libstdc++ \
+	openssl \
+	libintl \
 	curl \
-    && rm -rf /var/lib/apt/lists/*
-	
-ONBUILD WORKDIR /wln
+	icu \
+	--repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ && rm -rf /var/cache/apk/* && rm -rf /root/.cache && rm -rf /tmp/*
