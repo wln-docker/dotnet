@@ -1,8 +1,10 @@
-FROM alpine:3.11
+FROM alpine:3.15
 LABEL Maintainer="Wlniao <wlniao@qq.com>" \
       Description="Dotnet container based on Alpine Linux."
 
 RUN apk --no-cache add ca-certificates \
+	ttf-opensans \
+	ttf-dejavu \
 	krb5-libs \
 	libgdiplus \
 	libstdc++ \
