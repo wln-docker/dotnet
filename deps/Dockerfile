@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.14
 LABEL Maintainer="Wlniao <wlniao@qq.com>" \
       Description="Dotnet container based on Alpine Linux."
 
