@@ -8,7 +8,7 @@
 ## 镜像特点
 
 * 简洁精炼，小体积；
-* 体验一致，在docker.io,aliyun,daocloud均有构建副本，提高镜像拉取速度；
+* 体验一致，在docker.io,aliyun,tencentyun均有构建副本，提高镜像拉取速度；
 * 与XCore框架开发的程序结合可发挥更大优势。
 
 ## 有问题反馈
@@ -18,4 +18,4 @@
 * Web: http://www.wlniao.com
 * Email: wlniao@qq.com
 
-## 最新版本：3.1.22
+## 最新版本：6.0.0

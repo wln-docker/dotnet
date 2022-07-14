@@ -1,4 +1,4 @@
-FROM alpine:3.14
+FROM alpine:3.16
 LABEL Maintainer="Wlniao <wlniao@qq.com>" \
       Description="Dotnet container based on Alpine Linux."
 
@@ -11,6 +11,7 @@ RUN apk --no-cache add ca-certificates \
 	libssl1.1 \
 	libintl \
 	libgcc \
+	icu-libs \
 	openssl \
 	curl \
 	zlib \
