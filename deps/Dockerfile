@@ -4,7 +4,6 @@ LABEL Maintainer="Wlniao <wlniao@qq.com>" \
 
 RUN apk --no-cache add ca-certificates \
 	ttf-opensans \
-	ttf-dejavu \
 	krb5-libs \
 	libgdiplus \
 	libstdc++ \
@@ -16,4 +15,5 @@ RUN apk --no-cache add ca-certificates \
 	curl \
 	zlib \
 	icu \
-	--repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ && rm -rf /var/cache/apk/* && rm -rf /root/.cache && rm -rf /tmp/*
+	--repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ && rm -rf /var/cache/apk/* && rm -rf /root/.cache && rm -rf /tmp/* && \
+	ln -s /usr/lib/libgdiplus.so.0.0.0  /usr/lib/libgdiplus.so
