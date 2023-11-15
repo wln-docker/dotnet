@@ -18,4 +18,10 @@
 * Web: http://www.wlniao.com
 * Email: wlniao@qq.com
 
+## 基础库
+alpine
+* libgdiplus
+
+debian
+
 ## 最新版本：6.0.0
