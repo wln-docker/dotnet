@@ -1,6 +1,8 @@
 FROM wlniao/aot:8.0-debian
 LABEL Maintainer="WlniaoStudio <mail@wlniao.com>" \
       Description="Dotnet Runtime on Debian Linux."
+ENV DOTNET_RUNNING_IN_CONTAINER="true" \
+	DOTNET_USE_POLLING_FILE_WATCHER="true"
 RUN curl -o /tmp/dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/257bdcc7-cbfd-4680-964a-cbe8e9160bca/ac0cbf19d897ba51ae004b4146940a0a/aspnetcore-runtime-8.0.0-linux-x64.tar.gz \
     && mkdir -p $DOTNET_ROOT && tar zxf /tmp/dotnet.tar.gz -C $DOTNET_ROOT \
     && echo /dev/null > /tmp/dotnet.tar.gz \

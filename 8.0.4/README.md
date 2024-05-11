@@ -22,8 +22,8 @@ docker push ccr.ccs.tencentyun.com/wlniao/dotnet:8.0.4 && \
 docker push ccr.ccs.tencentyun.com/wlniao/dotnet:8.0.4-alpine && \
 docker push ccr.ccs.tencentyun.com/wlniao/dotnet:8.0.4-debian && \
 docker push ccr.ccs.tencentyun.com/wlniao/dotnet:8.0.4-ubuntu && \
-docker save -o /mnt/8.0.4-ubuntu.tar wlniao/dotnet:8.0.4-ubuntu && \
-docker save -o /mnt/8.0.4-debian.tar wlniao/dotnet:8.0.4-debian && \
 docker save -o /mnt/8.0.4-alpine.tar wlniao/dotnet:8.0.4-alpine && \
+docker save -o /mnt/8.0.4-debian.tar wlniao/dotnet:8.0.4-debian && \
+docker save -o /mnt/8.0.4-ubuntu.tar wlniao/dotnet:8.0.4-ubuntu && \
 docker images
 ```

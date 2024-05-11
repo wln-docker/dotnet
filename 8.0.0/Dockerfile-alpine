@@ -1,6 +1,8 @@
 FROM wlniao/aot:8.0-alpine
 LABEL Maintainer="WlniaoStudio <mail@wlniao.com>" \
       Description="Dotnet Runtime on Alpine Linux."
+ENV DOTNET_RUNNING_IN_CONTAINER="true" \
+	DOTNET_USE_POLLING_FILE_WATCHER="true"
 RUN wget -O /tmp/dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/7aa33fc7-07fe-48c2-8e44-a4bfb4928535/3b96ec50970eee414895ef3a5b188bcd/aspnetcore-runtime-8.0.0-linux-musl-x64.tar.gz \
     && mkdir -p $DOTNET_ROOT && tar zxf /tmp/dotnet.tar.gz -C $DOTNET_ROOT \
     && echo /dev/null > /tmp/dotnet.tar.gz \
