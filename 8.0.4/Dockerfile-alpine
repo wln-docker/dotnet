@@ -1,0 +1,9 @@
+FROM wlniao/aot:8.0-alpine
+LABEL Maintainer="WlniaoStudio <mail@wlniao.com>" \
+      Description="Dotnet Runtime on Alpine Linux."
+RUN wget -O /tmp/dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/a588c4ae-771c-43ba-aede-1526a871a653/e2c5d22a837be58c2190547924768db3/aspnetcore-runtime-8.0.4-linux-musl-x64.tar.gz \
+    && mkdir -p $DOTNET_ROOT && tar zxf /tmp/dotnet.tar.gz -C $DOTNET_ROOT \
+    && echo /dev/null > /tmp/dotnet.tar.gz \
+    && chmod 777 $DOTNET_ROOT  \
+    && chmod a+x $DOTNET_ROOT/dotnet \
+    && rm -rf /tmp/*
