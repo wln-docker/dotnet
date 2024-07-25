@@ -1,0 +1,4 @@
+FROM wlniao/dotnet:8.0.4-alpine
+RUN apk add libstdc++ libgdiplus >/dev/null \
+	&& ln -s /usr/lib/libgdiplus.so.0.0.0  /usr/lib/libgdiplus.so \
+	&& rm -rf /var/cache/apk/* && rm -rf /root/.cache && rm -rf /tmp/*

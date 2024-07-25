@@ -4,8 +4,8 @@ LABEL Maintainer="WlniaoStudio <mail@wlniao.com>" \
 ENV DOTNET_RUNNING_IN_CONTAINER="true" \
 	DOTNET_USE_POLLING_FILE_WATCHER="true"
 RUN wget -O /tmp/dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/a588c4ae-771c-43ba-aede-1526a871a653/e2c5d22a837be58c2190547924768db3/aspnetcore-runtime-8.0.4-linux-musl-x64.tar.gz \
-    && mkdir -p $DOTNET_ROOT && tar zxf /tmp/dotnet.tar.gz -C $DOTNET_ROOT \
-    && echo /dev/null > /tmp/dotnet.tar.gz \
-    && chmod 777 $DOTNET_ROOT  \
-    && chmod a+x $DOTNET_ROOT/dotnet \
-    && rm -rf /tmp/*
+	&& mkdir -p $DOTNET_ROOT && tar zxf /tmp/dotnet.tar.gz -C $DOTNET_ROOT \
+	&& echo /dev/null > /tmp/dotnet.tar.gz \
+	&& chmod 777 $DOTNET_ROOT  \
+	&& chmod a+x $DOTNET_ROOT/dotnet \
+	&& rm -rf /var/cache/apk/* && rm -rf /root/.cache && rm -rf /tmp/*
